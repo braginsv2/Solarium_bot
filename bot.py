@@ -81,6 +81,7 @@ class SolariumBot:
         self.dp.register_message_handler(self.minus_num_minutes, state=MinDetectQR.waiting_for_minutes)
         # Обработчик рассылки минут
         self.dp.register_message_handler(self.spam, state=allSpam.waiting_for_spam)
+        
         # Обработчики регистрации
         self.dp.register_message_handler(self.process_fullname, state=RegistrationStates.waiting_for_fullname)
         self.dp.register_message_handler(self.process_birthdate, state=RegistrationStates.waiting_for_birthdate)
